@@ -7,6 +7,7 @@
     --color-second: #ffebcc;
     --color-third: #e7ccaf;
     --color-four: #dcab73;
+    --color-gray: #91887b;
 
 
     --font-frank: "Frank Ruhl Libre", serif;
@@ -132,7 +133,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 8vh;
+    margin-top: 6vh;
     gap: 4vw;
 }
 
@@ -167,6 +168,23 @@
 
 .link:first-child { border: 1px solid var(--color-main); }
 .link:first-child::before { background-color: var(--color-main); }
+
+.badge {
+    display: flex;
+    margin: auto;
+    margin-top: 6vh;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    padding: 10px;
+    font-weight: 100;
+    background: #e3d1b6;
+    color: #68645f;
+    border-radius: 6px;
+
+}
+
+.badge span { margin-left: 2vw; }
 
 .wapp-icon { background-image: url(./src/wap.svg); }
 .ins-icon { background-image: url(./src/ins.svg); }
