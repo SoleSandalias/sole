@@ -6,7 +6,7 @@
     --color-main-dark: #aa722f;
     --color-second: #ffebcc;
     --color-third: #e7ccaf;
-    --color-four: #ddae9f;
+    --color-four: #dcab73;
 
 
     --font-frank: "Frank Ruhl Libre", serif;
@@ -34,7 +34,7 @@
     flex-direction: column;
     align-items: center;
     padding: 5vw;
-    padding-top: 5vh;
+    padding-top: 9vh;
     padding-bottom: 5vh;
     position: relative;
 }
@@ -82,7 +82,7 @@
     color: var(--color-main-dark);
     text-transform: uppercase;
     font-size: 2.4rem;
-    margin-top: 1vh;
+    margin-top: 3vh;
 }
 
 .title span{
@@ -111,10 +111,36 @@
     border-radius: 30px;
     margin-bottom: 3vh;
     text-decoration: none;
-    border: 1px solid var(--color-main);
+    border: 1px solid var(--color-four);
     color: var(--color-white);
     position: relative;
     transition: color 300ms ease-in-out;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    transition: background-image 300ms ease-in-out;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8vh;
+    gap: 4vw;
+}
+
+.social-link .icon,
+.social-link {
+    display: block;
+    width: 40px;
+    height: 40px;
 }
 
 .link span {
@@ -134,10 +160,21 @@
     bottom: 0;
     margin: auto;
     transition: width 300ms ease-in-out;
-    background-color: var(--color-main);
+    background-color: var(--color-four);
     border-radius: 30px;
     z-index: -1;
 }
 
-.link:hover { color: var(--color-main); }
-.link:hover::before { width: 0; }
+.link:first-child { border: 1px solid var(--color-main); }
+.link:first-child::before { background-color: var(--color-main); }
+
+.wapp-icon { background-image: url(./src/wap.svg); }
+.ins-icon { background-image: url(./src/ins.svg); }
+.fb-icon { background-image: url(./src/fbk.svg); }
+.tt-icon { background-image: url(./src/ttk.svg); }
+
+@media screen and (min-width: 601px) {
+    .link:hover { color: var(--color-main); }
+    .link:hover .wapp-icon { background-image: url(./src/wap-hover.svg); }
+    .link:hover::before { width: 0; }
+}
